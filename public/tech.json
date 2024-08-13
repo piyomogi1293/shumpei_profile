@@ -7,7 +7,7 @@
         "name": "TypeScript",
         "image_path": "/images/technology/typescript.png"
     },
-    "tailwindcss": {
+    "tailwind-css": {
         "name": "TailwindCSS",
         "image_path": "/images/technology/tailwindcss.png"
     },
@@ -15,11 +15,12 @@
         "name": "SQLite3",
         "image_path": "/images/technology/sqlite.png"
     },
+
     "react": {
         "name": "React",
         "image_path": "/images/technology/react.svg"
     },
-    "nextjs": {
+    "next-js": {
         "name": "Next.js",
         "image_path": "/images/technology/nextjs.png"
     },
@@ -27,6 +28,7 @@
         "name": "Firebase",
         "image_path": "/images/technology/firebase.png"
     },
+
     "git": {
         "name": "Git",
         "image_path": "/images/technology/git.png"
@@ -39,19 +41,22 @@
         "name": "Bitbucket",
         "image_path": "/images/technology/bitbucket.png"
     },
+
     "docker": {
         "name": "Docker",
         "image_path": "/images/technology/docker.png"
     },
-    "raspberrypi": {
+
+    "raspberry-pi": {
         "name": "Raspberry Pi",
         "image_path": "/images/technology/raspberrypi.jpeg"
     },
     "jetson": {
-        "name": "Jetson.png",
+        "name": "Jetson",
         "image_path": "/images/technology/Jetson.png"
     },
-    "stablediffusion": {
+
+    "stable-diffusion": {
         "name": "Stable Diffusion",
         "image_path": "/images/technology/stablediffusion.png"
     },

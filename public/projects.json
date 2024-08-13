@@ -4,7 +4,7 @@
       "mainImage": "/images/chamomile.png",
       "techNames": [
         "python",
-        "raspberrypi",
+        "raspberry-pi",
         "jetson"
       ],
       "type": 0
@@ -22,15 +22,15 @@
       "projectName": "【受託】生成AIのクラウド化",
       "mainImage": "",
       "techNames": [
+        "python",
+        "tailwind-css",
+        "react",
+        "firebase",
+        "docker",
         "bitbucket",
         "git",
-        "stablediffusion",
-        "sagemaker",
-        "docker",
-        "react",
-        "tailwindcss",
-        "firebase",
-        "python"
+        "stable-diffusion",
+        "sagemaker"
       ],
       "type": 2
     },
@@ -38,14 +38,14 @@
       "projectName": "お笑いWebサービス Tendon",
       "mainImage": "/images/tendon.png",
       "techNames": [
-        "github",
-        "git",
-        "nextjs",
-        "typescript",
-        "tailwindcss",
         "python",
+        "typescript",
+        "tailwind-css",
         "sqlite",
-        "firebase"
+        "next-js",
+        "firebase",
+        "github",
+        "git"
       ],
       "type": 3
     },
@@ -58,8 +58,8 @@
     {
       "projectName": "【受託】点群の3Dデータ化",
       "mainImage": "",
-      "techImages": [
-        "/images/technology/python.svg"
+      "techNames": [
+        "python"
       ],
       "type": 0
     }
