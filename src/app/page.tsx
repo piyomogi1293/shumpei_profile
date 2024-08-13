@@ -34,7 +34,7 @@ const Home = async () => {
         <div className="container mx-auto px-4 py-8 text-black">
           <h1 className="text-4xl font-bold mb-4 flex justify-center">Shumpei Portfolio</h1>
           <div className='m-96'></div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8">
             {projectsData.map((project: any, index: number) => (
               <ProjectCard
                 key={index}

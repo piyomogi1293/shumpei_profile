@@ -12,7 +12,7 @@ const projectTypeMap: { [key: number]: string } = {
 type ProjectCardProps = {
   projectName: string;
   mainImage: string;
-  techNames: string[]; // techNames は配列として扱います
+  techNames: string[];
   techData: Record<string, { name: string; image_path: string }>;
   projectType: number;
 };
@@ -32,8 +32,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ projectName, mainImage, techN
         </div>
       </div>
       <div className="p-6 mt-2">
-        <h2 className="text-lg font-bold">{projectName}</h2>
-        <p className='font-italic'>{projectTypeMap[projectType]}</p>
+        <h2 className="text-sm md:text-base lg:text-lg font-bold">{projectName}</h2>
+        <p className="text-xs md:text-sm">{projectTypeMap[projectType]}</p>
         <div className="flex flex-wrap gap-2 mt-2">
           {techNames?.length > 0 ? (
             techNames.map((tech) => (

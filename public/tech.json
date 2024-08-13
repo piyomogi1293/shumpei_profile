@@ -24,9 +24,17 @@
         "name": "Next.js",
         "image_path": "/images/technology/nextjs.png"
     },
+    "flutter": {
+        "name": "Flutter",
+        "image_path": "/images/technology/flutter.png"
+    },
     "firebase": {
         "name": "Firebase",
         "image_path": "/images/technology/firebase.png"
+    },
+    "gradio": {
+        "name": "Gradio",
+        "image_path": "/images/technology/gradio.png"
     },
 
     "git": {

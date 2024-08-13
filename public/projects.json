@@ -7,16 +7,18 @@
         "raspberry-pi",
         "jetson"
       ],
-      "type": 0
+      "type": 0,
+      "url": ""
     },
     {
       "projectName": "学習目標管理システム",
       "mainImage": "/images/up.png",
       "techNames": [
         "python",
-        "sqlite"
+        "sqlite3"
       ],
-      "type": 1
+      "type": 1,
+      "url": ""
     },
     {
       "projectName": "【受託】生成AIのクラウド化",
@@ -32,7 +34,8 @@
         "stable-diffusion",
         "sagemaker"
       ],
-      "type": 2
+      "type": 2,
+      "url": ""
     },
     {
       "projectName": "お笑いWebサービス Tendon",
@@ -41,19 +44,22 @@
         "python",
         "typescript",
         "tailwind-css",
-        "sqlite",
+        "sqlite3",
         "next-js",
         "firebase",
+        "gradio",
         "github",
         "git"
       ],
-      "type": 3
+      "type": 3,
+      "url": ""
     },
     {
       "projectName": "【アイデアソン】アグリテック甲子園 2023",
       "mainImage": "/images/agritech-koshien.png",
       "techImages": [],
-      "type": 0
+      "type": 0,
+      "url": ""
     },
     {
       "projectName": "【受託】点群の3Dデータ化",
@@ -61,6 +67,7 @@
       "techNames": [
         "python"
       ],
-      "type": 0
+      "type": 0,
+      "url": ""
     }
   ]
