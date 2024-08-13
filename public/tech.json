@@ -1,0 +1,63 @@
+{
+    "python": {
+        "name": "Python",
+        "image_path": "/images/technology/python.svg"
+    },
+    "typescript": {
+        "name": "TypeScript",
+        "image_path": "/images/technology/typescript.png"
+    },
+    "tailwindcss": {
+        "name": "TailwindCSS",
+        "image_path": "/images/technology/tailwindcss.png"
+    },
+    "sqlite3": {
+        "name": "SQLite3",
+        "image_path": "/images/technology/sqlite.png"
+    },
+    "react": {
+        "name": "React",
+        "image_path": "/images/technology/react.svg"
+    },
+    "nextjs": {
+        "name": "Next.js",
+        "image_path": "/images/technology/nextjs.png"
+    },
+    "firebase": {
+        "name": "Firebase",
+        "image_path": "/images/technology/firebase.png"
+    },
+    "git": {
+        "name": "Git",
+        "image_path": "/images/technology/git.png"
+    },
+    "github": {
+        "name": "GitHub",
+        "image_path": "/images/technology/github.png"
+    },
+    "bitbucket": {
+        "name": "Bitbucket",
+        "image_path": "/images/technology/bitbucket.png"
+    },
+    "docker": {
+        "name": "Docker",
+        "image_path": "/images/technology/docker.png"
+    },
+    "raspberrypi": {
+        "name": "Raspberry Pi",
+        "image_path": "/images/technology/raspberrypi.jpeg"
+    },
+    "jetson": {
+        "name": "Jetson.png",
+        "image_path": "/images/technology/Jetson.png"
+    },
+    "stablediffusion": {
+        "name": "Stable Diffusion",
+        "image_path": "/images/technology/stablediffusion.png"
+    },
+    "sagemaker": {
+        "name": "SageMaker",
+        "image_path": "/images/technology/sagemaker.png"
+    }
+
+}

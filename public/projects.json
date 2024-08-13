@@ -1,0 +1,66 @@
+[
+    {
+      "projectName": "【研究】カモミール自律収穫ロボット",
+      "mainImage": "/images/chamomile.png",
+      "techNames": [
+        "python",
+        "raspberrypi",
+        "jetson"
+      ],
+      "type": 0
+    },
+    {
+      "projectName": "学習目標管理システム",
+      "mainImage": "/images/up.png",
+      "techNames": [
+        "python",
+        "sqlite"
+      ],
+      "type": 1
+    },
+    {
+      "projectName": "【受託】生成AIのクラウド化",
+      "mainImage": "",
+      "techNames": [
+        "bitbucket",
+        "git",
+        "stablediffusion",
+        "sagemaker",
+        "docker",
+        "react",
+        "tailwindcss",
+        "firebase",
+        "python"
+      ],
+      "type": 2
+    },
+    {
+      "projectName": "お笑いWebサービス Tendon",
+      "mainImage": "/images/tendon.png",
+      "techNames": [
+        "github",
+        "git",
+        "nextjs",
+        "typescript",
+        "tailwindcss",
+        "python",
+        "sqlite",
+        "firebase"
+      ],
+      "type": 3
+    },
+    {
+      "projectName": "【アイデアソン】アグリテック甲子園 2023",
+      "mainImage": "/images/agritech-koshien.png",
+      "techImages": [],
+      "type": 0
+    },
+    {
+      "projectName": "【受託】点群の3Dデータ化",
+      "mainImage": "",
+      "techImages": [
+        "/images/technology/python.svg"
+      ],
+      "type": 0
+    }
+  ]
