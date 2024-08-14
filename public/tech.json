@@ -68,8 +68,8 @@
         "name": "Stable Diffusion",
         "image_path": "/images/technology/stablediffusion.png"
     },
-    "sagemaker": {
-        "name": "SageMaker",
+    "amazon-sagemaker": {
+        "name": "Amazon SageMaker",
         "image_path": "/images/technology/sagemaker.png"
     }
 

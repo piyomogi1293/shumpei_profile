@@ -1,4 +1,4 @@
-// components/TechImage.tsx
+// app/components/TechImage.tsx
 import React from 'react';
 import Image from 'next/image';
 
