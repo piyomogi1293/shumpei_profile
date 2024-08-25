@@ -39,7 +39,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, onNext, onPrevious, chil
       </button>
 
       <div
-        className="bg-white relative rounded-lg shadow-lg w-11/12 md:w-2/3 lg:w-1/2 xl:w-1/3 max-h-[80vh] overflow-y-auto p-6"
+        className="bg-white relative rounded-lg shadow-lg w-11/12 md:w-2/3  max-h-[80vh] overflow-y-auto p-6"
         onClick={handleModalContentClick} // コンテンツクリック時のイベント伝播を停止
       >
         <button

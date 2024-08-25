@@ -104,14 +104,14 @@ const ProjectList: React.FC<ProjectListProps> = ({ projectsData, techData }) => 
       >
         {selectedProject && (
           <div>
-            {/* メイン画像の表示 */}
-            <div className="mb-4">
+            {/* メイン画像の表示 - アスペクト比16:9を保つ */}
+            <div className="relative w-full mb-4" style={{ aspectRatio: '16 / 9' }}>
               <Image
                 src={selectedProject.mainImage}
                 alt={selectedProject.projectName}
-                width={600}
-                height={400}
-                className="rounded-lg object-cover"
+                layout="fill" // 親コンテナに合わせる
+                objectFit="cover" // コンテンツを中央に合わせてカバー
+                className="rounded-lg"
               />
             </div>
 
