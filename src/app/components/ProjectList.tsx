@@ -1,14 +1,14 @@
-// app/components/ProjectList.tsx
+// components/ProjectList.tsx
 'use client';
 
 import React, { useState } from 'react';
 import ProjectCard from './ProjectCard';
+import Modal from './Modal';
 
 const projectTypeMap: { [key: number]: string } = {
   0: '大学',
-  1: 'アルバイト',
-  2: 'インターン',
-  3: '個人開発',
+  1: 'インターン',
+  2: '個人開発等',
 };
 
 type Project = {
@@ -16,6 +16,7 @@ type Project = {
   mainImage: string;
   techNames: string[];
   type: number;
+  description: string; // プロジェクトの説明を追加
 };
 
 type ProjectListProps = {
@@ -25,6 +26,13 @@ type ProjectListProps = {
 
 const ProjectList: React.FC<ProjectListProps> = ({ projectsData, techData }) => {
   const [filteredType, setFilteredType] = useState<number | null>(null);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null); // モーダルに表示するプロジェクトの状態
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleProjectClick = (project: Project) => {
+    setSelectedProject(project);
+    setIsModalOpen(true);
+  };
 
   const filteredProjects = filteredType === null
     ? projectsData
@@ -51,8 +59,6 @@ const ProjectList: React.FC<ProjectListProps> = ({ projectsData, techData }) => 
         ))}
       </div>
 
-      {/* <div className='m-96'></div> */}
-
       {/* プロジェクトの表示 */}
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8">
         {filteredProjects.map((project, index) => (
@@ -63,9 +69,21 @@ const ProjectList: React.FC<ProjectListProps> = ({ projectsData, techData }) => 
             techNames={project.techNames}
             techData={techData}
             projectType={project.type}
+            onClick={() => handleProjectClick(project)} // プロジェクトクリック時の処理
           />
         ))}
       </div>
+
+      {/* モーダル */}
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+        {selectedProject && (
+          <div>
+            <h2 className="text-2xl font-bold mb-4">{selectedProject.projectName}</h2>
+            <p>{selectedProject.description}</p>
+            {/* 他のプロジェクトの詳細をここに追加することができます */}
+          </div>
+        )}
+      </Modal>
     </>
   );
 };

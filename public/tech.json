@@ -71,6 +71,14 @@
     "amazon-sagemaker": {
         "name": "Amazon SageMaker",
         "image_path": "/images/technology/sagemaker.png"
+    },
+    "mongodb": {
+        "name": "MongoDB",
+        "image_path": "/images/technology/mongodb.svg"
+    },
+    "chatgpt": {
+        "name": "ChatGPT",
+        "image_path": "/images/technology/chatgpt.svg"
     }
 
 }

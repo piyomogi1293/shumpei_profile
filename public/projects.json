@@ -8,7 +8,7 @@
         "jetson"
       ],
       "type": 0,
-      "url": ""
+      "description": "カモミールを自律に摘み取るロボットを作成しています。"
     },
     {
       "projectName": "学習目標管理システム",
@@ -17,8 +17,8 @@
         "python",
         "sqlite3"
       ],
-      "type": 1,
-      "url": ""
+      "type": 2,
+      "description": ""
     },
     {
       "projectName": "【受託】生成AIのクラウド化",
@@ -29,16 +29,16 @@
         "react",
         "firebase",
         "docker",
-        "bitbucket",
-        "git",
         "stable-diffusion",
-        "amazon-sagemaker"
+        "amazon-sagemaker",
+        "bitbucket",
+        "git"
       ],
-      "type": 2,
-      "url": ""
+      "type": 1,
+      "description": ""
     },
     {
-      "projectName": "お笑いWebサービス Tendon",
+      "projectName": "【チーム】お笑いWebサービス Tendon",
       "mainImage": "/images/tendon_thumb.png",
       "techNames": [
         "python",
@@ -51,15 +51,15 @@
         "github",
         "git"
       ],
-      "type": 3,
-      "url": ""
+      "type": 2,
+      "description": ""
     },
     {
       "projectName": "【アイデアソン】アグリテック甲子園 2023",
       "mainImage": "/images/agritech-koshien_thumb.png",
       "techImages": [],
       "type": 0,
-      "url": ""
+      "description": ""
     },
     {
       "projectName": "【受託】点群の3Dデータ化",
@@ -68,6 +68,17 @@
         "python"
       ],
       "type": 0,
-      "url": ""
+      "description": ""
+    },
+    {
+      "projectName": "【受託】ニュース情報収集システム",
+      "mainImage": "",
+      "techNames": [
+        "python",
+        "mongodb",
+        "chatgpt"
+      ],
+      "type": 1,
+      "description": ""
     }
   ]
