@@ -1,9 +1,10 @@
-// components/ProjectList.tsx
 'use client';
 
 import React, { useState } from 'react';
 import ProjectCard from './ProjectCard';
 import Modal from './Modal';
+import Image from 'next/image'; // 画像表示用にインポート
+import TechImageList from './TechImageList';
 
 const projectTypeMap: { [key: number]: string } = {
   0: '大学',
@@ -11,12 +12,16 @@ const projectTypeMap: { [key: number]: string } = {
   2: '個人開発等',
 };
 
+type ProjectContents = {
+  [key: string]: string; // contentsの型定義
+};
+
 type Project = {
   projectName: string;
   mainImage: string;
   techNames: string[];
   type: number;
-  description: string; // プロジェクトの説明を追加
+  contents: ProjectContents; // contentsを追加
 };
 
 type ProjectListProps = {
@@ -26,17 +31,33 @@ type ProjectListProps = {
 
 const ProjectList: React.FC<ProjectListProps> = ({ projectsData, techData }) => {
   const [filteredType, setFilteredType] = useState<number | null>(null);
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null); // モーダルに表示するプロジェクトの状態
+  const [selectedProjectIndex, setSelectedProjectIndex] = useState<number | null>(null); // 現在選択されたプロジェクトのインデックスを管理
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleProjectClick = (project: Project) => {
-    setSelectedProject(project);
+  const handleProjectClick = (index: number) => {
+    setSelectedProjectIndex(index);
     setIsModalOpen(true);
+  };
+
+  const handleNextProject = () => {
+    if (selectedProjectIndex !== null) {
+      const nextIndex = (selectedProjectIndex + 1) % filteredProjects.length;
+      setSelectedProjectIndex(nextIndex);
+    }
+  };
+
+  const handlePreviousProject = () => {
+    if (selectedProjectIndex !== null) {
+      const prevIndex = (selectedProjectIndex - 1 + filteredProjects.length) % filteredProjects.length;
+      setSelectedProjectIndex(prevIndex);
+    }
   };
 
   const filteredProjects = filteredType === null
     ? projectsData
     : projectsData.filter((project) => project.type === filteredType);
+
+  const selectedProject = selectedProjectIndex !== null ? filteredProjects[selectedProjectIndex] : null;
 
   return (
     <>
@@ -69,18 +90,51 @@ const ProjectList: React.FC<ProjectListProps> = ({ projectsData, techData }) => 
             techNames={project.techNames}
             techData={techData}
             projectType={project.type}
-            onClick={() => handleProjectClick(project)} // プロジェクトクリック時の処理
+            onClick={() => handleProjectClick(index)} // インデックスを渡す
           />
         ))}
       </div>
 
       {/* モーダル */}
-      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+      <Modal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        onNext={handleNextProject}
+        onPrevious={handlePreviousProject}
+      >
         {selectedProject && (
           <div>
+            {/* メイン画像の表示 */}
+            <div className="mb-4">
+              <Image
+                src={selectedProject.mainImage}
+                alt={selectedProject.projectName}
+                width={600}
+                height={400}
+                className="rounded-lg object-cover"
+              />
+            </div>
+
+            {/* プロジェクト名 */}
             <h2 className="text-2xl font-bold mb-4">{selectedProject.projectName}</h2>
-            <p>{selectedProject.description}</p>
-            {/* 他のプロジェクトの詳細をここに追加することができます */}
+
+            <div className='mb-4'>
+              <h3 className='text-xl font-bold'>使用技術</h3>
+              <TechImageList
+                techNames={selectedProject.techNames}
+                techData={techData}
+              />
+            </div>
+
+            {/* contentsのキーとバリューを動的に表示 */}
+            <div className="mb-4">
+              {Object.entries(selectedProject.contents).map(([title, text]) => (
+                <div key={title} className="mb-4">
+                  <h3 className="text-xl font-semibold">{title}</h3>
+                  <p>{text}</p>
+                </div>
+              ))}
+            </div>
           </div>
         )}
       </Modal>

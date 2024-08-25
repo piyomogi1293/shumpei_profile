@@ -8,7 +8,12 @@
         "jetson"
       ],
       "type": 0,
-      "description": "カモミールを自律に摘み取るロボットを作成しています。"
+      "contents": {
+        "詳細":
+          "カモミールを自律に摘み取るロボットを作成しています。",
+        "工夫点":
+          "ロボットの限られたリソースで効果的に処理を実現すること"
+      }
     },
     {
       "projectName": "学習目標管理システム",
@@ -18,7 +23,10 @@
         "sqlite3"
       ],
       "type": 2,
-      "description": ""
+      "contents": {
+        "詳細": "",
+        "工夫点": ""
+      }
     },
     {
       "projectName": "【受託】生成AIのクラウド化",
@@ -35,7 +43,10 @@
         "git"
       ],
       "type": 1,
-      "description": ""
+      "contents": {
+        "詳細": "",
+        "工夫点": ""
+      }
     },
     {
       "projectName": "【チーム】お笑いWebサービス Tendon",
@@ -52,14 +63,20 @@
         "git"
       ],
       "type": 2,
-      "description": ""
+      "contents": {
+        "詳細": "",
+        "工夫点": ""
+      }
     },
     {
       "projectName": "【アイデアソン】アグリテック甲子園 2023",
       "mainImage": "/images/agritech-koshien_thumb.png",
       "techImages": [],
       "type": 0,
-      "description": ""
+      "contents": {
+        "詳細": "",
+        "工夫点": ""
+      }
     },
     {
       "projectName": "【受託】点群の3Dデータ化",
@@ -68,7 +85,10 @@
         "python"
       ],
       "type": 0,
-      "description": ""
+      "contents": {
+        "詳細": "",
+        "工夫点": ""
+      }
     },
     {
       "projectName": "【受託】ニュース情報収集システム",
@@ -79,6 +99,9 @@
         "chatgpt"
       ],
       "type": 1,
-      "description": ""
+      "contents": {
+        "詳細": "",
+        "工夫点": ""
+      }
     }
   ]

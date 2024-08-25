@@ -1,7 +1,7 @@
 // components/ProjectCard.tsx
 import React from 'react';
-import TechImage from './TechImage';
 import Image from 'next/image';
+import TechImageList from './TechImageList';  // Import the new component
 
 const projectTypeMap: { [key: number]: string } = {
   0: '大学',
@@ -21,7 +21,7 @@ type ProjectCardProps = {
   techNames: string[];
   techData: Record<string, { name: string; image_path: string }>;
   projectType: number;
-  onClick: () => void; // 新しいプロパティを追加
+  onClick: () => void;
 };
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -30,7 +30,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   techNames = [],
   techData,
   projectType,
-  onClick, // onClickを受け取る
+  onClick,
 }) => {
   return (
     <div className="bg-white shadow-lg rounded-lg overflow-hidden cursor-pointer" onClick={onClick}>
@@ -51,15 +51,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             {projectTypeMap[projectType]}
           </p>
         </div>
-        <div className="flex flex-wrap gap-2 mt-2">
-          {techNames?.length > 0 ? (
-            techNames.map((tech) => (
-              <TechImage key={tech} techName={tech} techData={techData} />
-            ))
-          ) : (
-            <p>No technologies listed</p>
-          )}
-        </div>
+        {/* Use the TechImageList component */}
+        <TechImageList techNames={techNames} techData={techData} />
       </div>
     </div>
   );
