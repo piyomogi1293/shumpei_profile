@@ -72,6 +72,10 @@
         "name": "Amazon SageMaker",
         "image_path": "/images/technology/sagemaker.png"
     },
+    "aws-lambda": {
+        "name": "AWS Lambda",
+        "image_path": "/images/technology/aws-lambda.png"
+    },
     "mongodb": {
         "name": "MongoDB",
         "image_path": "/images/technology/mongodb.svg"
