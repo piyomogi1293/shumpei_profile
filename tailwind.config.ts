@@ -15,7 +15,16 @@ const config: Config = {
       },
       backgroundSize: {
         'custom': '500px 500px',
-      }
+      },
+      animation: {
+        marquee: 'marquee 20s linear infinite', // カスタムアニメーションを追加
+      },
+      keyframes: {
+        marquee: {
+          '0%': { transform: 'translateX(100%)' }, // 右端からスタート
+          '100%': { transform: 'translateX(-100%)' }, // 左端まで移動
+        },
+      },
     },
   },
   plugins: [],

@@ -3,6 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import React from 'react';
 import ProjectList from './components/ProjectList';
+import TechCarousel from './components/TechCarousel';
 
 async function getProjectsData() {
   const projectsFilePath = path.join(process.cwd(), 'public', 'projects.json');
@@ -26,6 +27,8 @@ const Home = async () => {
       <div className="relative z-10 h-full overflow-y-auto">
         <div className="container mx-auto px-4 py-8 text-black">
           <h1 className="text-4xl font-bold mb-4 flex justify-center">Shumpei Portfolio</h1>
+          {/* TechCarouselにtechDataを渡す */}
+          <TechCarousel techData={techData} />
           {/* クライアントコンポーネントにデータを渡す */}
           <ProjectList projectsData={projectsData} techData={techData} />
         </div>

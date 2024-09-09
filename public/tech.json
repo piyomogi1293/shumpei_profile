@@ -76,6 +76,10 @@
         "name": "AWS Lambda",
         "image_path": "/images/technology/aws-lambda.png"
     },
+    "heroku": {
+        "name": "Heroku",
+        "image_path": "/images/technology/heroku.png"
+    },
     "mongodb": {
         "name": "MongoDB",
         "image_path": "/images/technology/mongodb.svg"
