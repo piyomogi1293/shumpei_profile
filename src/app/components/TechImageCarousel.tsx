@@ -21,7 +21,7 @@ const TechImage: React.FC<TechImageProps> = ({ techName, techData }) => {
         height={200}
         className="w-8 h-8 object-cover"
       />
-      <span className="absolute left-1/2 transform -translate-x-1/2 bottom-full mb-2 opacity-0 group-hover:opacity-100 text-sm font-medium bg-black text-white py-1 px-2 rounded-lg pointer-events-none">
+      <span className="left-1/2 transform -translate-x-1/2 bottom-full mb-2 opacity-0 group-hover:opacity-100 text-sm font-medium bg-black text-white py-1 px-2 rounded-lg pointer-events-none">
         {tech.name}
       </span>
     </div>

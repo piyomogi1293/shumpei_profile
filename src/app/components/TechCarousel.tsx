@@ -2,7 +2,7 @@
 'use client'; // クライアントコンポーネントとして宣言
 
 import React from 'react';
-import TechImage from './TechImage';
+import TechImage from './TechImageCarousel';
 
 type TechData = Record<string, { name: string; image_path: string }>;
 

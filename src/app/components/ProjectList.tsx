@@ -13,7 +13,7 @@ const projectTypeMap: { [key: number]: string } = {
 };
 
 type ProjectContents = {
-  [key: string]: string; // contentsの型定義
+  [key: string]: string | { [key: string]: string }; // contentsの型定義を修正
 };
 
 type Project = {
@@ -129,12 +129,33 @@ const ProjectList: React.FC<ProjectListProps> = ({ projectsData, techData }) => 
             {/* contentsのキーとバリューを動的に表示 */}
             <div className="mb-4">
               {Object.entries(selectedProject.contents).map(([title, text]) => (
-                <div key={title} className="mb-4">
-                  <h3 className="text-xl font-semibold">{title}</h3>
-                  <p>{text}</p>
-                </div>
+                typeof text === 'string' ? (
+                  <div key={title} className="mb-4">
+                    <h3 className="text-xl font-semibold">{title}</h3>
+                    <p>{text}</p>
+                  </div>
+                ) : null
               ))}
             </div>
+            {/* 関連リンクの表示 */}
+            {selectedProject.contents['関連リンク'] && typeof selectedProject.contents['関連リンク'] === 'object' && (
+              <div className="mb-4">
+                <h3 className="text-xl font-bold">関連リンク</h3>
+                <div className="flex flex-col gap-2">
+                  {Object.entries(selectedProject.contents['関連リンク']).map(([linkName, linkUrl]) => (
+                    <a
+                      key={linkName}
+                      href={linkUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-center max-w-fit"
+                    >
+                      {linkName}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         )}
       </Modal>
