@@ -22,7 +22,7 @@ const config: Config = {
       keyframes: {
         marquee: {
           '0%': { transform: 'translateX(100%)' }, // 右端からスタート
-          '100%': { transform: 'translateX(-100%)' }, // 左端まで移動
+          '100%': { transform: 'translateX(-120%)' }, // 左端まで移動
         },
       },
     },
