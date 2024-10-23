@@ -120,10 +120,13 @@
     "mainImage": "/images/news-analysis_thumb.png",
     "techNames": [
       "python",
-      "mongodb",
       "chatgpt",
       "aws-lambda",
       "heroku",
+      "auth0",
+      "postgresql",
+      "graphql",
+      "mongodb",
       "bitbucket",
       "git"
     ],
@@ -144,6 +147,7 @@
       "chatgpt",
       "heroku",
       "firebase",
+      "auth0",
       "bitbucket",
       "git"
     ],

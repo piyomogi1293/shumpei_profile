@@ -15,7 +15,18 @@
         "name": "SQLite3",
         "image_path": "/images/technology/sqlite.png"
     },
-
+    "postgresql":{
+        "name": "PostgreSQL",
+        "image_path": "/images/technology/postgresql.png"
+    },
+    "graphql":{
+        "name": "GraphQL",
+        "image_path": "/images/technology/graphql.png"
+    },
+    "mongodb": {
+        "name": "MongoDB",
+        "image_path": "/images/technology/mongodb.svg"
+    },
     "react": {
         "name": "React",
         "image_path": "/images/technology/react.svg"
@@ -31,6 +42,10 @@
     "firebase": {
         "name": "Firebase",
         "image_path": "/images/technology/firebase.png"
+    },
+    "auth0": {
+        "name": "Auth0",
+        "image_path": "/images/technology/auth0.svg"
     },
     "gradio": {
         "name": "Gradio",
@@ -80,13 +95,8 @@
         "name": "Heroku",
         "image_path": "/images/technology/heroku.png"
     },
-    "mongodb": {
-        "name": "MongoDB",
-        "image_path": "/images/technology/mongodb.svg"
-    },
     "chatgpt": {
         "name": "ChatGPT",
         "image_path": "/images/technology/chatgpt.svg"
     }
-
 }
