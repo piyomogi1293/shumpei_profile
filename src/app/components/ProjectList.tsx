@@ -141,16 +141,31 @@ const ProjectList: React.FC<ProjectListProps> = ({ projectsData, techData }) => 
             {selectedProject.contents['関連リンク'] && typeof selectedProject.contents['関連リンク'] === 'object' && (
               <div className="mb-4">
                 <h3 className="text-xl font-bold">関連リンク</h3>
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-3">
                   {Object.entries(selectedProject.contents['関連リンク']).map(([linkName, linkUrl]) => (
                     <a
                       key={linkName}
                       href={linkUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-center max-w-fit"
+                      className="bg-white text-blue-900 font-bold py-3 px-6 rounded-lg border-2 border-blue-700 shadow-lg hover:bg-blue-700 hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 flex items-center justify-center space-x-2"
+                      style={{ wordWrap: 'break-word' }}
                     >
-                      {linkName}
+                      <span>{linkName}</span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-5 w-5 text-blue-900"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M13 7l5 5m0 0l-5 5m5-5H6"
+                        />
+                      </svg>
                     </a>
                   ))}
                 </div>
